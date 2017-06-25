@@ -11,7 +11,7 @@ function backup_android {
     ./$1/adb shell ls -1 -a /sdcard/ > .output
 
     # Elimina i residui di ADB
-    sed -i '1d;2d' .output
+    sed -i -e '1d;2d' .output
 
     # Crea cartella backup
     mkdir backup_android_`date "+%d-%m-%Y"`/$p 2>/dev/null
