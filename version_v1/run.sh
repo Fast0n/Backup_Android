@@ -24,13 +24,25 @@ function backup_android {
 
 ## Main
 clear && reset
-echo Avvio Backup Android...
+echo Avvio Backup Android
+echo --------------------
 
 # Controllo sistema
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
-    backup_android 'linux'
+    MACHINE_TYPE=`uname -m`
+
+    if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+        # 64-bit
+        backup_android 'linux'
+    else
+        # 32-bit
+        backup_android 'linux32'
+    fi
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OSX
     backup_android 'macos'
+else
+    echo Sistema non riconosciuto...
 fi
