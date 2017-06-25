@@ -5,7 +5,7 @@ Lo scopo di questo progetto è quello di fare un backup di tutti i file dentro i
 * ### Versione n°1 ###
   * Non richiede nessun tipo di download.
 
-![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/versions_v1/img/1.png?raw=true "Avvio script iniziale")![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/versions_v1/img/2.png?raw=true "Avvio script interno all'OS, Backup")
+![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/version_v1/img/2.png?raw=true "Avvio script interno all'OS, Backup")
 
 
 * ### Versione n°2 ###
@@ -23,7 +23,7 @@ Lo scopo di questo progetto è quello di fare un backup di tutti i file dentro i
 
           # brew install dialog
 
-![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/versions_v2/img/1.png?raw=true "Avvio script iniziale")![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/versions_v2/img/2.png?raw=true "Avvio script interno all'OS")![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/versions_v2/img/3.png?raw=true "Avvio Backup")
+![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/version_v2/img/2.png?raw=true "Avvio script interno all'OS")![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/version_v2/img/3.png?raw=true "Avvio Backup")
 
 # Dona per il progetto
 Per la creazione di questo progetto è stato investito del tempo, se ritieni che sia utile dona allo sviluppatore
