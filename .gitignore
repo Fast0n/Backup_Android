@@ -1,5 +1,6 @@
 versions_v1/img/*
 versions_v2/img/*
+backup_android_*
 *.cache
 *.cache-e
 *.output
