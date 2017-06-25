@@ -7,11 +7,11 @@ PS3='Quale sistema operativo usi? '
 
 # Funzione di backup
 function backup_android {
-    # importa cartelle e file dal dispositivo a .output
+    # Importa cartelle e file dal dispositivo a .output
     ./$1/adb shell ls -1 -a /sdcard/ > .output
 
     # Elimina i residui di ADB
-    sed -i '1d;2d' .output
+    sed -i -e '1d;2d' .output
 
     # Crea cartella backup
     mkdir backup_android_`date "+%d-%m-%Y"`/$p 2>/dev/null
@@ -24,13 +24,25 @@ function backup_android {
 
 ## Main
 clear && reset
-echo Avvio Backup Android...
+echo Avvio Backup Android
+echo --------------------
 
 # Controllo sistema
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
-    backup_android 'linux'
+    MACHINE_TYPE=`uname -m`
+
+    if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+        # 64-bit
+        backup_android 'linux'
+    else
+        # 32-bit
+        backup_android 'linux32'
+    fi
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OSX
     backup_android 'macos'
+else
+    echo Sistema non riconosciuto...
 fi
