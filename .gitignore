@@ -1,5 +1,5 @@
-/versions_v1/img/*
-/versions_v2/img/*
+versions_v1/img/*
+versions_v2/img/*
 *.cache
 *.cache-e
 *.output
