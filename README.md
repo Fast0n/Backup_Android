@@ -12,13 +12,17 @@ Lo scopo di questo progetto è quello di fare un backup di tutti i file dentro i
 * ### Versione n°2 ###
 
 * Richiede il download di Dialog:
-  * Linux:
+  * Linux (Debian-Based):
 
-        $ apt install Dialog
+        # apt install dialog
+        
+  * Linux (Arch-Based):
 
+        # pacman install dialog
+        
   * MacOS:
 
-        $ brew install Dialog
+        # brew install dialog
 
 ![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/versions_v2/img/1.png?raw=true "Avvio script iniziale")![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/versions_v2/img/2.png?raw=true "Avvio script interno all'OS")![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/versions_v2/img/3.png?raw=true "Avvio Backup")
 
