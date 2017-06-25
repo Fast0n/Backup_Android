@@ -7,7 +7,7 @@ PS3='Quale sistema operativo usi? '
 
 # Funzione di backup
 function backup_android {
-    # importa cartelle e file dal dispositivo a .output
+    # Importa cartelle e file dal dispositivo a .output
     ./$1/adb shell ls -1 -a /sdcard/ > .output
 
     # Elimina i residui di ADB
