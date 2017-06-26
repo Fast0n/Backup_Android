@@ -11,13 +11,17 @@ function backup_android {
     ./$1/adb kill-server
 
     # Riavvia adb
-    ./$1/adb shell touch
+    ./$1/adb shell touch 1>/dev/null
 
     # Importa cartelle e file dal dispositivo a .output
     ./$1/adb shell ls -a /sdcard/ > .output
 
     # Rimuove . e .. dalla lista
     sed -i -e '1d;2d' .output
+
+    # Fix fine righa (Android <= 6.0)
+    tr -s '\r' '\n'  < .output > .cache
+    mv .cache .output
 
     # Crea cartella backup
     mkdir backup_android_`date "+%d-%m-%Y"`/$p 2>/dev/null
