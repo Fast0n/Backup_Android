@@ -8,7 +8,10 @@ PS3='Quale sistema operativo usi? '
 # Funzione di backup
 function backup_android {
     # Importa cartelle e file dal dispositivo a .output
-    ./$1/adb shell ls -1 -A /sdcard/ > .output
+    ./$1/adb shell ls -a /sdcard/ > .output
+
+    # Rimuove . e .. dalla lista
+    sed -i -e '1d;2d' .output
 
     # Crea cartella backup
     mkdir backup_android_`date "+%d-%m-%Y"`/$p 2>/dev/null
