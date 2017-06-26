@@ -14,7 +14,7 @@ function backup_android {
     ./$1/adb shell touch 1>/dev/null
 
     # Importa cartelle e file dal dispositivo a .output
-    ./$1/adb shell busybox ls -a -1 /sdcard/ > .output
+    ./$1/adb shell ls -a /sdcard/ > .output
 
     # Rimuove . e .. dalla lista
     sed -i -e '1d;2d' .output
