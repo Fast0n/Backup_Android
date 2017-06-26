@@ -1,4 +1,4 @@
-# Versione n°2 - Backup grafico con checklist
+# Versione n°3 - Backup grafico con checklist
 
     chmod +x run.sh && ./run.sh 
 
