@@ -40,6 +40,8 @@ function display_menu {
             while read p; do
                 ./$1/adb pull "/mnt/sdcard/$p" "backup_android_`date "+%d-%m-%Y"`/$p"
             done < .output
+
+            rm -f .output
             exit
         elif [ $rv == 0 ]; then
             # Elimina il nome selezionato
@@ -53,7 +55,7 @@ function display_menu {
 
 ## Main
 # Controllo sistema
-if [ $OSTYPE == "linux-gnu" ]; then
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
     MACHINE_TYPE=`uname -m`
 
@@ -66,7 +68,8 @@ if [ $OSTYPE == "linux-gnu" ]; then
         backup_android 'linux32'
         display_menu 'linux32'
     fi
-elif [ $OSTYPE == "darwin"* ]; then
+
+elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OSX
     brew install dialog
     backup_android 'macos'

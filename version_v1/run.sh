@@ -17,6 +17,8 @@ function backup_android {
     while read p; do
         ./$1/adb pull "/mnt/sdcard/$p" "backup_android_`date "+%d-%m-%Y"`/$p"
     done < .output
+
+    rm -f .output
 }
 
 ## Main
@@ -25,7 +27,7 @@ echo Avvio Backup Android
 echo --------------------
 
 # Controllo sistema
-if [ $OSTYPE == "linux-gnu" ]; then
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
     MACHINE_TYPE=`uname -m`
 
@@ -37,7 +39,7 @@ if [ $OSTYPE == "linux-gnu" ]; then
         backup_android 'linux32'
     fi
 
-elif [ $OSTYPE == "darwin"* ]; then
+elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OSX
     backup_android 'macos'
 else
