@@ -21,10 +21,11 @@ function display_menu {
         i=1
         s2=''
 
-        for entry in `cat .output`; do
+        while read entry; do
+            entry=$(echo "$entry" | tr -s ' ' '_')
             s2+="$i $entry "
             let i+=1
-        done
+        done < .output
 
         # Display Menu
         OPTION=$(dialog --title "Backup Android" --extra-button --extra-label "Backup"\
