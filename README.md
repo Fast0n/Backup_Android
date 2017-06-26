@@ -32,7 +32,7 @@ Lo scopo di questo progetto è quello di fare un backup di tutti i file dentro i
 ![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/version_v3/img/1.png?raw=true "Avvio Backup")
 
 # Dona per il progetto
-Per la creazione di questo progetto è stato investito del tempo, se ritieni che sia utile dona allo sviluppatore
+Per la creazione di questo progetto è stato investito del tempo, se ritieni che sia utile dona allo sviluppatore.
 
 
 [![gitcheese.com](https://s3.amazonaws.com/gitcheese-ui-master/images/badge.svg)](https://www.gitcheese.com/donate/users/5260133/repos/95372423)
