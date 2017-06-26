@@ -24,10 +24,11 @@ function display_menu {
         i=1
         s2=''
 
-        for entry in `cat .output`; do
-            s2+="$i $entry $opt_status "
-            let i+=1
-        done
+       while read entry; do
+           entry=$(echo "$entry" | tr -s ' ' '_')
+           s2+="$i $entry $opt_status "
+           let i+=1
+       done < .output
 
         # Display Menu
         OPTION=$(dialog --title "Backup Android" --checklist "Seleziona i file/cartelle da escludere dal backup (usando 'spazio')" 80 60 15 $s2 3>&1 1>&2 2>&3)
