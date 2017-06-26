@@ -74,7 +74,7 @@ if [ $OSTYPE == "linux-gnu" ]; then
         backup_android 'linux32'
         display_menu 'linux32'
     fi
-elif [ $OSTYPE == "darwin"* ]; then
+elif [ $OSTYPE == "darwin16" ]; then
     # Mac OSX
     brew install dialog
     backup_android 'macos'
