@@ -10,6 +10,12 @@ opt_status='on'
 
 # Funzione di backup
 function backup_android {
+    # Kill-server (Android <= 6.0)
+    ./$1/adb kill-server
+
+    # Riavvia adb
+    ./$1/adb shell touch
+
     # Importa cartelle e file dal dispositivo a .output
     ./$1/adb shell ls -a /sdcard/ > .output
 
