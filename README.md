@@ -17,7 +17,7 @@ Lo scopo di questo progetto è quello di fare un backup di tutti i file dentro i
         
     * Linux (Arch-Based):
 
-          # pacman install dialog
+          # pacman -S dialog
         
     * MacOS:
 
