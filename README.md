@@ -2,10 +2,12 @@
 
 Lo scopo di questo progetto è quello di fare un backup di tutti i file dentro il proprio dispositivo senza limiti.
 
+![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/version_v1/img/1.png?raw=true "Splashscreen")
+
 * ### Versione n°1 ###
   * Non richiede nessun tipo di download.
 
-![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/version_v1/img/1.png?raw=true "Avvio script, Avvio Backup")
+![Alt text](https://raw.githubusercontent.com/Fast0n/Backup_Android/master/version_v1/img/2.png?raw=true "Avvio script, Avvio Backup")
 
 
 * ### Versione n°2 ###
