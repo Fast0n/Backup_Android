@@ -26,19 +26,23 @@ function backup_android {
     clear
 
     # Kill-server (Android <= 6.0)
-    ./$1/adb kill-server
+    ./$1/adb kill-server 1>/dev/null
 
     # Riavvia adb
-    ./$1/adb shell touch 1>/dev/null
+    ./$1/adb start-server 1>/dev/null
+
+    # Clean
+    rm -f .output 2>/dev/null
 
     # Importa cartelle e file dal dispositivo a .output
-    ./$1/adb shell ls -a /sdcard/ > .output
+    ./$1/adb shell find /sdcard/ -maxdepth 1 > .output
 
-    # Rimuove . e .. dalla lista
-    sed -i -e '1d;2d' .output
+    # Rimuove prefisso cartella
+    sed -i -e "s/\/sdcard\///g" .output
+    sed -i -e '1d' .output
 
-    # Fix fine righa (Android <= 6.0)
-    tr -s '\r' '\n'  < .output > .cache
+    # Ordina l'output
+    sort .output > .cache
     mv .cache .output
 
     # Crea cartella backup
