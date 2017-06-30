@@ -43,9 +43,6 @@ function backup_android {
     # Rimuove . e .. dalla lista
     sed -i -e '1d;2d' .output
 
-    # Splitta le colonne
-    sed -i -e "s/\s\s/\n/g" .output
-
     # Fix fine righa (Android <= 6.0)
     tr -s '\r' '\n'  < .output > .cache
     mv .cache .output
